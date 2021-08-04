@@ -1,0 +1,124 @@
+/*
+ * В этом файле стили для статического сайта на GitHub Pages
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper, footer {
+  visibility: initial;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  min-height: initial;
+  margin-bottom: 0;
+}
+
+header {
+  height: auto;
+}
+
+#header-logo-and-buttons #donate {
+  display: none;
+}
+
+#wrapper {
+  display: block;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+#columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#columns > div {
+  float: none;
+  flex-basis: 33.33%;
+  position: sticky;
+  top: 0;
+  margin: 0;
+}
+body.not-front #columns > div:not(:first-child) {
+  margin-left: 15px;
+}
+body.not-front #columns > div:not(:last-child) {
+  margin-right: 15px;
+}
+
+#center .page-header {
+  font-size: 28px;
+  line-height: 1;
+}
+
+#block-fieldblock-node-battle-default-field-summary .cities > .item > .number {
+  display: initial;
+  width: auto;
+  flex-basis: 50px;
+  flex-shrink: 0;
+}
+
+#block-fieldblock-node-battle-default-field-summary .cities > .item > .city {
+  width: auto;
+}
+
+.type-material_media.image-hor .media-anons-cont {
+  float: none;
+  width: auto;
+  height: auto;
+}
+
+.strong-links {
+  display: flex;
+  justify-content: space-between;
+}
+.strong-links > a {
+  width: auto;
+  flex-basis: 100%;
+  padding: 10px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer::after {
+  display: none;
+}
+
+footer #footer-left,
+footer #footer-right,
+footer #footer-links-1,
+footer #footer-block-left,
+footer #footer-block-right {
+  float: none;
+  width: auto;
+}
+
+#contacts-block span,
+#contacts-block a {
+  display: block;
+}
+#contacts-block br {
+  display: none;
+}
+
+#footer-blocks {
+  display: flex;
+}
+
+#footer-block-left,
+#footer-block-right {
+  flex-basis: 50%;
+}
+
+#license-block {
+  display: flex;
+  height: auto;
+}
