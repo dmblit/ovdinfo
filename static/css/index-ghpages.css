@@ -18,9 +18,8 @@ body {
 }
 
 header {
-  height: auto;
+  height: auto !important;
 }
-
 #header-logo-and-buttons #donate {
   display: none;
 }
@@ -34,26 +33,93 @@ header {
 #columns {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
 }
-
 #columns > div {
+  box-sizing: border-box;
   float: none;
-  flex-basis: 33.33%;
-  position: sticky;
-  top: 0;
-  margin: 0;
 }
-body.not-front #columns > div:not(:first-child) {
-  margin-left: 15px;
+body.not-front #columns > div {
+  margin-left: 0;
+  margin-right: 0;
 }
-body.not-front #columns > div:not(:last-child) {
-  margin-right: 15px;
+#columns::after {
+  display: none;
 }
 
-#center .page-header {
-  font-size: 28px;
-  line-height: 1;
+@media (max-width: 699.9px) {
+  #columns {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  #columns > div:not(:first-child) {
+    margin-top: 20px;
+  }
+  #center {
+    order: 1;
+  }
+  #right {
+    order: 2;
+  }
+  #left {
+    order: 3;
+  }
+  .ghpages-mobile__item:not(:first-child) {
+    margin-top: 15px;
+  }
+  [data-ghpages-mobile-order] {
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+  #columns {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #columns > div {
+    position: sticky;
+    top: 0;
+    flex: 1;
+  }
+  #columns > div:not(:first-child) {
+    padding-left: 5px;
+  }
+  #columns > div:not(:last-child) {
+    padding-right: 5px;
+  }
+  #ghpages-mobile {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  #columns > div:not(:first-child) {
+    padding-left: 15px;
+  }
+  #columns > div:not(:last-child) {
+    padding-right: 15px;
+  }
+}
+
+.strong-links {
+  display: flex;
+  justify-content: space-between;
+}
+.strong-links > a {
+  width: auto;
+  flex: 1;
+}
+
+.type-material_media.image-hor .media-anons-cont {
+  float: none;
+  width: auto;
+  height: auto;
+}
+.type-material_media img {
+  width: 100%;
+}
+@media (min-width: 700px) and (max-width: 1099.9px) {
+  .type-material_media .field-type-text-with-summary.field-label-hidden {
+    display: none;
+  }
 }
 
 #block-fieldblock-node-battle-default-field-summary .cities > .item > .number {
@@ -63,35 +129,46 @@ body.not-front #columns > div:not(:last-child) {
   flex-shrink: 0;
 }
 
+#center .page-header {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+@media (max-width: 499.9px), (min-width: 700px) and (max-width: 1099.9px) {
+  #block-fieldblock-node-battle-default-field-summary .cities {
+    column-count: 1;
+  }
+}
 #block-fieldblock-node-battle-default-field-summary .cities > .item > .city {
   width: auto;
 }
 
-.type-material_media.image-hor .media-anons-cont {
-  float: none;
-  width: auto;
-  height: auto;
-}
-
-.strong-links {
-  display: flex;
-  justify-content: space-between;
-}
-.strong-links > a {
-  width: auto;
-  flex-basis: 100%;
-  padding: 10px 0;
+@media (max-width: 499.9px), (min-width: 700px) and (max-width: 1099.9px) {
+  .main-block-legal .title {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .main-block-legal .subtitle {
+    font-size: 24px;
+  }
 }
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-
-footer::after {
+@media (min-width: 500px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer::after,
+#footer-left::after,
+#footer-blocks::after {
   display: none;
 }
-
 footer #footer-left,
 footer #footer-right,
 footer #footer-links-1,
@@ -100,7 +177,21 @@ footer #footer-block-right {
   float: none;
   width: auto;
 }
-
+#footer-left,
+#footer-right {
+  margin: 0;
+}
+#footer-left {
+  flex-shrink: 0;
+}
+@media (min-width: 500px) {
+  #footer-left {
+    margin-right: 15px;
+  }
+}
+#footer-right {
+  max-width: 60%;
+}
 #contacts-block span,
 #contacts-block a {
   display: block;
@@ -108,17 +199,30 @@ footer #footer-block-right {
 #contacts-block br {
   display: none;
 }
-
 #footer-blocks {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
+@media (min-width: 900px) {
+  #footer-blocks {
+    flex-direction: row;
+  }
+}
 #footer-block-left,
 #footer-block-right {
-  flex-basis: 50%;
+  flex: 1;
+  margin-bottom: 10px;
 }
-
+#memorial-block,
 #license-block {
   display: flex;
+  flex-direction: column;
   height: auto;
+}
+@media (min-width: 900px) {
+  #memorial-block,
+  #license-block {
+    flex-direction: row;
+  }
 }
