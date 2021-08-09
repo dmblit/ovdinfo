@@ -1,0 +1,427 @@
+/*
+ * Стили в этом файле скопированы с https://ovdinfo.org/* как есть
+ */
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Extrabold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraboldItalic';
+  src: url('../fonts/OpenSans-ExtraboldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansLight-Italic';
+  src: url('../fonts/OpenSansLight-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../fonts/OpenSans-Semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiboldItalic';
+  src: url('../fonts/OpenSans-SemiboldItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'podkova';
+  src: url('../fonts/Podkova-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'podkova';
+  src: url('../fonts/Podkova-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello-more';
+  src: url('../fonts/fontello-more.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello-share';
+  src: url('../fonts/fontello-share.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+.field-name-field-pdf .field-items .file a:before,
+.field-name-field-docs .file a:before,
+.field-name-field-docs2 .file a:before,
+.field-name-field-location-link-upd a:before {
+  font-family: "fontello-share";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mail:before {
+  content: '\e800';
+}
+
+
+/* 'î €' */
+
+.icon-menu-1:before {
+  content: '\e801';
+}
+
+
+/* 'î ' */
+
+.icon-cancel:before {
+  content: '\e802';
+}
+
+
+/* 'î ‚' */
+
+.icon-phone:before {
+  content: '\e803';
+}
+
+
+/* 'î ƒ' */
+
+.icon-share:before {
+  content: '\e804';
+}
+
+
+/* 'î „' */
+
+.icon-wallet:before {
+  content: '\e805';
+}
+
+
+/* 'î …' */
+
+.icon-search:before {
+  content: '\e806';
+}
+
+
+/* 'î †' */
+
+.icon-download:before {
+  content: '\e807';
+}
+
+
+/* 'î ‡' */
+
+.icon-credit-card:before {
+  content: '\e808';
+}
+
+
+/* 'î ˆ' */
+
+.icon-flash:before {
+  content: '\e809';
+}
+
+
+/* 'î ‰' */
+
+.icon-resize-full-alt:before {
+  content: '\e80a';
+}
+
+
+/* 'î Š' */
+
+.icon-signal:before {
+  content: '\e80b';
+}
+
+
+/* 'î ‹' */
+
+.icon-clipboard:before {
+  content: '\e80c';
+}
+
+
+/* 'î Œ' */
+
+.icon-plus-squared:before {
+  content: '\e80d';
+}
+
+
+/* 'î ' */
+
+.icon-down-open-mini:before {
+  content: '\e80e';
+}
+
+
+/* 'î Ž' */
+
+.icon-up-open-mini:before {
+  content: '\e80f';
+}
+
+
+/* 'î ' */
+
+.icon-pencil:before {
+  content: '\e810';
+}
+
+
+/* 'î ' */
+
+.icon-left:before {
+  content: '\e811';
+}
+
+
+/* 'î ‘' */
+
+.icon-down:before {
+  content: '\e812';
+}
+
+
+/* 'î ’' */
+
+.icon-up:before {
+  content: '\e813';
+}
+
+
+/* 'î “' */
+
+.icon-right:before {
+  content: '\e814';
+}
+
+
+/* 'î ”' */
+
+.icon-twitter:before {
+  content: '\f099';
+}
+
+
+/* 'ï‚™' */
+
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+
+/* 'ï‚š' */
+
+.icon-menu:before {
+  content: '\f0c9';
+}
+
+
+/* 'ïƒ‰' */
+
+.icon-mail-alt:before {
+  content: '\f0e0';
+}
+
+
+/* 'ïƒ ' */
+
+.icon-angle-left:before {
+  content: '\f104';
+}
+
+
+/* 'ï„„' */
+
+.icon-angle-right:before {
+  content: '\f105';
+}
+
+
+/* 'ï„…' */
+
+.icon-youtube-squared:before {
+  content: '\f166';
+}
+
+
+/* 'ï…¦' */
+
+.icon-youtube:before {
+  content: '\f167';
+}
+
+
+/* 'ï…§' */
+
+.icon-instagram:before {
+  content: '\f16d';
+}
+
+
+/* 'ï…­' */
+
+.icon-tumblr:before {
+  content: '\f173';
+}
+
+
+/* 'ï…³' */
+
+.icon-vkontakte:before {
+  content: '\f189';
+}
+
+
+/* 'ï†‰' */
+
+.icon-file-pdf:before {
+  content: '\f1c1';
+}
+
+
+/* 'ï‡' */
+
+.icon-paper-plane:before {
+  content: '\f1d8';
+}
+
+
+/* 'ï‡˜' */
+
+.icon-paper-plane-empty:before {
+  content: '\f1d9';
+}
+
+
+/* 'ï‡™' */
+
+.icon-twitter-squared:before {
+  content: '\f304';
+}
+
+
+/* 'ïŒ„' */
+
+.icon-facebook-squared:before {
+  content: '\f308';
+}
+
+
+/* 'ïŒˆ' */
+
+.icon-location:before {
+  content: '\e815';
+}
+
+
+/* 'î •' */
+
+.icon-location-1:before {
+  content: '\e816';
+}
+
+
+/* 'î –' */
+
+.field-name-field-pdf .field-items .file a:before,
+.field-name-field-docs .file a:before,
+.field-name-field-docs2 .file a:before {
+  content: '\e807';
+}
+
+.field-name-field-location-link-upd a:before {
+  content: '\e815';
+}
+
+
+/* 'î •' */

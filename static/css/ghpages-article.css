@@ -1,0 +1,34 @@
+/*
+ * В этом файле стили для страниц article/ статического сайта на GitHub Pages
+ */
+
+#wrapper {
+  display: block;
+  padding: 0 10px;
+}
+
+#columns {
+  display: flex;
+  max-width: 900px;
+}
+/*temp*/
+.text-page #social-column {
+  display: none;
+}
+@media (max-width: 799.9px) {
+  #columns {
+    flex-direction: column;
+  }
+}
+@media (min-width: 800px) {
+  #columns {
+    flex-direction: row;
+  }
+  .text-page #social-column {
+    align-self: flex-start;
+    position: sticky !important;
+    top: 20px !important;
+  }
+body.not-front #columns > div {
+  float: none;
+}

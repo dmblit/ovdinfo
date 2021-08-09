@@ -1,28 +1,6 @@
 /*
- * В этом файле стили для статического сайта на GitHub Pages
+ * В этом файле стили для главной страницы статического сайта на GitHub Pages
  */
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.page-wrapper, footer {
-  visibility: initial;
-}
-
-.page-wrapper {
-  flex-grow: 1;
-  min-height: initial;
-  margin-bottom: 0;
-}
-
-header {
-  height: auto !important;
-}
-#header-logo-and-buttons #donate {
-  display: none;
-}
 
 #wrapper {
   display: block;
@@ -151,78 +129,5 @@ body.not-front #columns > div {
   }
   .main-block-legal .subtitle {
     font-size: 24px;
-  }
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (min-width: 500px) {
-  footer {
-    flex-direction: row;
-  }
-}
-footer::after,
-#footer-left::after,
-#footer-blocks::after {
-  display: none;
-}
-footer #footer-left,
-footer #footer-right,
-footer #footer-links-1,
-footer #footer-block-left,
-footer #footer-block-right {
-  float: none;
-  width: auto;
-}
-#footer-left,
-#footer-right {
-  margin: 0;
-}
-#footer-left {
-  flex-shrink: 0;
-}
-@media (min-width: 500px) {
-  #footer-left {
-    margin-right: 15px;
-  }
-}
-#footer-right {
-  max-width: 60%;
-}
-#contacts-block span,
-#contacts-block a {
-  display: block;
-}
-#contacts-block br {
-  display: none;
-}
-#footer-blocks {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-@media (min-width: 900px) {
-  #footer-blocks {
-    flex-direction: row;
-  }
-}
-#footer-block-left,
-#footer-block-right {
-  flex: 1;
-  margin-bottom: 10px;
-}
-#memorial-block,
-#license-block {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-@media (min-width: 900px) {
-  #memorial-block,
-  #license-block {
-    flex-direction: row;
   }
 }
