@@ -7,6 +7,10 @@ body {
   flex-direction: column;
 }
 
+#preloader {
+  display: none;
+}
+
 .page-wrapper, footer {
   visibility: initial;
 }
