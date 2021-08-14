@@ -8778,7 +8778,7 @@ imag[src="https://ovdinfo.org/sites/default/files/styles/media-image/public/defa
 }
 
 #tg-bot {
-  background: url(/sites/all/themes/ovdinfo/img/xtg-icon.png.pagespeed.ic.ZemvzTA0J0.png) no-repeat left center #139bd0;
+  background: url(../img/tg-icon.png) no-repeat left center #139bd0;
   border-radius: 5px;
   color: #fff;
   padding: 5px 10px 5px 30px;

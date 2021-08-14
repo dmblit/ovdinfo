@@ -1,0 +1,32 @@
+#legal-items {
+  column-width: auto;
+  column-gap: 20px;
+}
+@media (min-width: 600px) {
+  #legal-items {
+    column-count: 2;
+  }
+}
+@media (min-width: 900px) {
+  #legal-items {
+    column-count: 3;
+  }
+}
+
+.grid-sizer {
+  display: none;
+}
+.legal-item-wrap {
+  float: none;
+  display: inline-block;
+  width: auto !important;
+  padding: 0;
+}
+
+#legal-filter {
+  display: none;
+}
+
+#social-column {
+  display: none;
+}
