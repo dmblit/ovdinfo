@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Распознавание участников протеста по видеокамерам | ОВД-Инфо</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="robots" content="follow, index">
+
+    <meta name="description" content="Бывает, что участников протестов задерживают не только в дни самих акций, но и после. Сотрудники полиции составляют протоколы об административном правонарушении на основании записей с камер…">
+    <meta name="abstract" content="Бывает, что участников протестов задерживают не только в дни самих акций, но и после. Сотрудники полиции составляют протоколы об административном правонарушении на основании записей с камер…">
+    <meta name="keywords" content="ОВД-Инфо, задержание, тюрьма, полиция, суд, политпрессинг">
+    <link rel="image_src" href="./sharing.png">
+    <link rel="canonical" href="https://legal.ovdinfo.org/face-recognition">
+    <link rel="shortlink" href="https://ovdinfo.org/node/36924">
+
+    <meta property="fb:app_id" content="341658905864052">
+    <meta property="og:site_name" content="ОВД-Инфо">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Распознавание участников протеста по видеокамерам | ОВД-Инфо">
+    <meta property="og:url" content="https://legal.ovdinfo.org/face-recognition">
+    <meta property="og:description" content="Бывает, что участников протестов задерживают не только в дни самих акций, но и после. Сотрудники полиции составляют протоколы об административном правонарушении на основании записей с камер…">
+    <meta property="og:image" content="./sharing.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ovdinfo">
+    <meta name="twitter:creator" content="@ovdinfo">
+    <meta name="twitter:creator:id" content="432728240">
+    <meta name="twitter:url" content="https://legal.ovdinfo.org/face-recognition">
+    <meta name="twitter:title" content="Распознавание участников протеста по видеокамерам">
+    <meta name="twitter:description" content="Бывает, что участников протестов задерживают не только в дни самих акций, но и после. Сотрудники полиции составляют протоколы об административном правонарушении на основании записей с камер">
+    <meta name="twitter:image" content="./sharing.png">
+    <meta name="twitter:image:width" content="1200">
+    <meta name="twitter:image:height" content="630">
+    <meta property="vk:image" content="./sharing.png">
+
+    <link type="text/css" rel="stylesheet" href="/static/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/legal.css">
+    <script type="text/javascript" src="/static/js/ghpages.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
+
+    <!-- temp -->
+    <link type="text/css" rel="stylesheet" href="/ovdinfo/static/css/fonts.css">
+    <link type="text/css" rel="stylesheet" href="/ovdinfo/static/css/legal.css">
+    <script type="text/javascript" src="/ovdinfo/static/js/ghpages.js"></script>
+  </head>
+  <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-36924 node-type-instruction type-report-legal">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div id="header-top-wrap">
+          <div id="header-top">
+            <div id="logo-and-projest-class">
+              <a href="https://ovdinfo.org" id="ovdinfo">
+              <img src="data:image/webp;base64,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" width="" height="" alt="ОВД-Инфо" title="ОВД-Инфо" id="logo">
+              </a>
+              <span class="separator">•</span>
+              <a href="/" class="project-class" title="Твои права">Твои права</a>
+            </div>
+            <div id="let-know">
+              <a id="call-header" href="tel:+78007070528">Сообщить о задержании:</a>
+              <div id="connect">
+                <a id="tg-bot" class="icon-paper-plane-empty" href="https://t.me/OvdInfoBot" target="_blank">Правовой бот</a>
+                <a class="call-nr icon-phone" href="tel:+78007070528">8 800 707-05-28</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // header-top, // header-top-wrap -->
+        <div id="header-main">
+          <div id="sitename-wrap">
+            <h1 id="sitename" title="Распознавание участников протеста по видеокамерам">Распознавание участников протеста по видеокамерам</h1>
+            <br>
+            <h2 id="subtitle">Как происходит, что ждет, а так вообще можно?</h2>
+          </div>
+          <div class="progressbar"></div>
+        </div>
+      </header>
+      <!-- // header -->
+      <div class="share-butt" id="share-butt">
+        <span class="share icon-share" id="share-link"></span>
+        <div class="social-likes social-likes_vertical" data-url="https://ovdinfo.org/legal/face-recognition" data-counters="no">
+          <div class="facebook icon-facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+          <div class="twitter icon-twitter" title="Поделиться ссылкой в Твиттере"></div>
+          <div class="vkontakte icon-vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+        </div>
+      </div>
+      <!-- // share-butt -->
+      <a id="donate" href="https://donate.ovdinfo.org" class="donateLink hide">Поддержать ОВД-Инфо</a>
+      <div class="cover-wrap" style="background-image:url(./cover_instr.png)">
+        <img src="./cover_instr.png" class="opt-img">
+        <div class="bottom-down-wrap"><a href="#main" class="button icon-down">Перейти</a></div>
+      </div>
+      <div id="main" class="field-name-body">
+        <p>Бывает, что участников протестов задерживают не только в дни самих акций, но и после. Сотрудники полиции составляют протоколы об административном правонарушении на основании записей с камер видеонаблюдения, снимавших протестующих на акции. ОВД-Инфо публикует инструкцию о том, как себя вести, если вас вычислили по камерам после акции протеста, и рассказывает, насколько все это законно.</p>
+        <p>Короткая версия — в карточках, а полную читайте ниже!</p>
+        <div data-oembed-url="https://www.instagram.com/p/COLR3DUHPG_/">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/COLR3DUHPG_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            <div style="padding:16px;">
+              <div style=" display: flex; flex-direction: row; align-items: center;">
+                <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"> </div>
+                <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                  <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"> </div>
+                  <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"> </div>
+                </div>
+              </div>
+              <div style="padding: 19% 0;"> </div>
+              <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                <a href="https://www.instagram.com/p/COLR3DUHPG_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                  <svg height="50px" version="1.1" viewbox="0 0 60 60" width="50px" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                    <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                      <g fill="#000000" transform="translate(-511.000000, -20.000000)">
+                        <g>
+                          <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+              <div style="padding-top: 8px;">
+                <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"><a href="https://www.instagram.com/p/COLR3DUHPG_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">View this post on Instagram</a></div>
+              </div>
+              <div style="padding: 12.5% 0;"> </div>
+              <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                <div>
+                  <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"> </div>
+                  <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"> </div>
+                  <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"> </div>
+                </div>
+                <div style="margin-left: 8px;">
+                  <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"> </div>
+                  <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"> </div>
+                </div>
+                <div style="margin-left: auto;">
+                  <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"> </div>
+                  <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"> </div>
+                  <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"> </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"> </div>
+                <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"> </div>
+              </div>
+              <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/COLR3DUHPG_/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by ОВД-Инфо (@ovdinfo)</a></p>
+            </div>
+          </blockquote>
+          <script async="" src="//platform.instagram.com/en_US/embeds.js"></script>
+        </div>
+        <p>«Никто вам точно не скажет, по каким частям тела или лица вас может узнать система видеонаблюдения. Неизвестно, какой объем информации есть о вас. Это может быть, например, тип походки. Или, если в системе есть значительное количество ваших фотографий, никакая маска не спасет от распознавания лица», — <a href="https://ovdinfo.org/articles/2021/05/13/poetomu-vseh-usilenno-fotografiruyut-pri-zaderzhanii-kak-raspoznayut-uchastnikov">интервью с экспертом Transparency International</a> по безопасности и технологиям идентификации.</p>
+        <h2>Съемка и распознавание участников протеста</h2>
+        <h3><strong>А можно ли носить медицинскую маску на акции протеста? </strong></h3>
+        <p>Носить маску не только законно, но и обязательно — по <a href="http://base.garant.ru/74811008/#block_25" target="_blank">постановлению</a> Роспотребнадзора. Конституционный суд прямо <a href="https://www.kommersant.ru/doc/3043959" target="_blank">указал</a>, что носить головные уборы не с целью скрыть свое лицо, а, например, для защиты от холода или жары, также допустимо.</p>
+        <h3><strong>Законно ли использование технологии распознавания лиц против участников протеста? </strong></h3>
+        <p>В данном случае незаконно. Распознавание лиц является обработкой биометрических данных, что попадает под статью 11 ФЗ «<a href="http://www.consultant.ru/document/cons_doc_LAW_61801/7336c78762a98b5f4f698b8c3800dca1111acc16/" target="_blank">О персональных данных</a>». Без письменного согласия граждан такая обработка незаконна. Исключение — если обработка осуществляется в соответствии с законом об оперативно-розыскной деятельности либо в целях осуществления правосудия.</p>
+        <p>Однако «правосудие» — это деятельность суда, а не полиции (п. 1 ст. 118 Конституции). Оперативно-розыскная деятельность (ОРД) не может осуществляться на основании сведений о признаках административного правонарушения. ОРД может осуществляться только в случае преступлений (см. <a href="http://www.consultant.ru/document/cons_doc_LAW_19780/d5d1f49254b6661f05fa126c89e809018ed3af81/" target="_blank">определение</a> Конституционного Суда РФ от 14.07.1998 N 86-О, <a href="https://zakonbase.ru/content/nav/84419" target="_blank">определение</a> Конституционного Суда РФ от 09.06.2005 N 327-О).</p>
+        <p>Поэтому массовое распознавание лиц на фото/видео с целью выявления участников протестных акций и привлечения их к административной ответственности нарушает ФЗ «О персональных данных», не говоря уже о праве граждан на частную жизнь (ст. 23 и 24 Конституции России), а, значит, оно незаконно.</p>
+        <p>Использование технологии распознавания лиц против участников акции протеста открывает дорогу различным злоупотреблениям со стороны правоохранительных органов:</p>
+        <ul>
+          <li aria-level="1">никакого детального регулирования данной процедуры и ограничений для полицейских нет;</li>
+          <li aria-level="1">отсутствует судебный контроль и возможность обжалования;</li>
+          <li aria-level="1">распознавание осуществляется массово — без учета конкретных обстоятельств и серьезности «правонарушения», в нарушение <a href="https://hudoc.echr.coe.int/fre#%7B" itemid="" target="_blank">требований</a> Конвенции о защите прав человека и основных свобод;</li>
+          <li aria-level="1">полицейские могут составить протокол в любое время по своему желанию, что позволяет манипулировать правоприменением, делает правоприменение непредсказуемым;</li>
+          <li aria-level="1">система не всегда распознает правильно, и к ответственности могут пытаться привлечь людей, которые даже не участвовали в акции (см. <a class="linkit" href="https://ovdinfo.org/news/2021/04/22/posledstviya-akciy-protesta-iz-za-zaklyucheniya-navalnogo-hronika-chast-2#wtf_1501451">пример</a>). А доказать суду, что полиция не права, на практике очень сложно.</li>
+        </ul>
+        <p>Поэтому, если вас обнаружили при помощи распознавания лиц и привлекают к административной ответственности после акции, необходимо возражать в процессе суда против использования таких видео- и фотодоказательств и порядка составления протокола. Это необходимо для последующего обращения в ЕСПЧ. Аргументы на этот счет есть в нашем <a href="/help-yourself#10">генераторе и шаблоне </a>апелляционной жалобы. С точки зрения ЕСПЧ, есть хорошие шансы, что такое массовое распознавание будет признано недопустимым. ЕСПЧ уже признавал, что государство не может произвольно и неограниченно вторгаться в частную жизнь и персональные данные граждан даже в целях охраны правопорядка (Shimovolos v. Russia, § 66, Segerstedt-Wiberg and Others v. Sweden, § 88, Gaughran v. the United Kingdom, 2020 (§§ 97-98)).</p>
+        <h3><strong>Удалять ли фото и видео из соцсетей?</strong></h3>
+        <p>Как правило, полиция заводит дела на основании фото/видео, которые полицейские сделали сами либо с камер городского видеонаблюдения. Однако видео или фото из личных аккаунтов в Instagram или других соцсетей также иногда являются поводом для возбуждения административных дел. Нам известны такие случаи в отношении людей, которые координировали протестное движение. Также были случаи, когда к учащимся учебных заведений приходили с разъяснительными беседами после того, как они выложили свое фото с акции в соцсети. Если хотите перестраховаться, можете не постить фото с акций и удалить уже опубликованные.</p>
+        <h2>Если вас ищет полиция</h2>
+        <h3><strong>Что делать, если вызывают в отдел полиции для составления протокола?</strong></h3>
+        <p>Составить протокол после участия в акции могут через несколько дней, а могут и позже — но в пределах срока давности с момента участия в акции (1 год по митинговой статье 20.2 КоАП, если не задержали на самой акции). Хотя <a href="http://www.consultant.ru/document/cons_doc_LAW_34661/fdd3f9193eaeaa836bbf5ec2b303f080451bb1a8/" target="_blank">закон</a> требует составить протокол сразу после выявления правонарушения, нарушение требования составить протокол немедленно, по мнению Верховного суда, <a href="http://base.garant.ru/12139487/" target="_blank">не является основанием</a> для прекращения дела.</p>
+        <p>Вы вправе не ходить на составление протокола. Даже если вы подписывали обязательство о явке и даже если вам пришла такая повестка. Ответственности за неявку нет — если вы не придете, протокол просто составят в ваше отсутствие (ч. 4.1 ст. 28.2 КоАП).</p>
+        <p>Мы рекомендуем <strong>не ходить одному</strong> на составление протокола об административном правонарушении. Обращайтесь в ОВД-Инфо — мы постараемся предоставить адвоката. В нашей практике были случаи, когда в отделе полиции удавалось доказать, что на видео/фото был другой человек, и полиция закрывала дело.</p>
+        <h3><strong>Что делать, если приходят домой? </strong></h3>
+        <p>Вы вправе не открывать сотрудникам полиции в этом случае. Ни составление протокола, ни взятие объяснений, ни беседа <a href="http://www.consultant.ru/document/cons_doc_LAW_28399/ed0b829604f79a6e37a7e1aa152b243656e82949/#:~:text=%D0%96%D0%B8%D0%BB%D0%B8%D1%89%D0%B5%20%D0%BD%D0%B5%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE.,%D0%B8%D0%BB%D0%B8%20%D0%BD%D0%B0%20%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B8%20%D1%81%D1%83%D0%B4%D0%B5%D0%B1%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F." target="_blank">не являются основаниями</a> для входа в жилище без вашего согласия.</p>
+        <p>Вы можете вообще не отвечать на звонок в дверь (если только ее не пилят). Однако вас могут поджидать около дома. Могут отключать свет и интернет, ломиться в квартиру (кстати, на это можно будет потом пожаловаться — см. <a href="https://ovdinfo.org/documents/2018/03/05/kak-pozhalovatsya-na-deystvie-i-bezdeystvie-policeyskih">инструкцию</a> на этот счет).</p>
+        <p>Если вы понимаете, что избежать встречи с полицейскими невозможно, обращайтесь в ОВД-Инфо — мы постараемся предоставить адвоката. Открывать дверь полиции следует только по приезде адвоката. Пока ждете, вы можете через закрытую дверь поинтересоваться, с какой целью пришли сотрудники полиции. Полицейский должен сказать вам, на каком основании он хочет войти, а также назвать свое ФИО и показать служебное удостоверение.</p>
+        <p>Учтите, что сотрудники полиции не всегда называют настоящую причину визита. Разговор через дверь мы советуем записывать на камеру. Чтобы не идти на конфликт, вы можете предложить сотруднику обсудить вопросы по телефону / если вы ничего не знаете по интересующему полицейского вопросу — так и сказать / предложить оставить документы в почтовом ящике.</p>
+        <h3><strong>Что делать, если звонят по телефону?</strong></h3>
+        <p>Вызов по телефону не может считаться надлежащей повесткой. Вы не можете удостовериться, что говорите именно с полицейским (может, это пранк), а полицейский не сможет доказать, что говорил именно с вами. Вы можете спросить, с какой целью вам звонят, но потом все равно потребовать прислать повестку по адресу вашего проживания. Повестка также нужна вам, чтобы отпроситься с работы или учебы. Даже само МВД <a href="https://14.xn--b1aew.xn--p1ai/document/2630594" target="_blank">указывает</a>, что вы вправе просить повестку в таком случае. И обязательно сообщите ОВД-Инфо на линию или в бот о таком звонке!</p>
+        <h3><strong>Что если все-таки увозят в отдел полиции?</strong></h3>
+        <p>Учтите, вас могут задержать как на несколько часов, так и на 48 часов — если вменят статью, предполагающую арест.</p>
+        <p>Поэтому заранее соберите сумку на случай ночевки в отделе полиции — пригодятся: зубная щетка и паста, влажные (не спиртовые!) салфетки, туалетная бумага, книги, еда (примерный список того, что можно, а что нельзя — <a href="https://web.facebook.com/nesterova.lizaveta/posts/1334348246632616?_rdc=1&amp;_rdr" target="_blank">тут</a>).</p>
+        <p>Если у вас есть домашние животные, позаботьтесь о том, кто будет их кормить.</p>
+        <p>Если у вас есть дети, убедитесь, что они не останутся без присмотра: хотя матерей детей до 14 лет нельзя задерживать более чем на 3 часа, полиция периодически нарушает это правило.</p>
+        <p>Помните, что некоторые категории лиц нельзя задерживать более чем на три часа — полный список <a href="/vam-vmenili-arestnuyu-statyu-chto-delat#2">тут</a>. Если вы к ним относитесь, подготовьте подтверждающие документы.</p>
+        <h2>Визит в полицию</h2>
+        <p>Если вы решили идти в полицию, то делать это надо с адвокатом. Обращайтесь в ОВД-Инфо — мы постараемся его предоставить.</p>
+        <p>До составления протокола у вас максимальные шансы избежать преследования. Для этого необходимо убедить сотрудников полиции, что вы не участвовали в акции (если это так). Такие случаи в нашей практике неоднократно встречались. А вот после составления протокола полицией суд практически всегда назначает наказание.</p>
+        <p>В полицию будут вызывать очень много людей, в том числе тех, кто не был на последней акции:</p>
+        <ul>
+          <li aria-level="1">участников предыдущих акций</li>
+          <li aria-level="1">людей, похожих на тех, кто попал на видео с митингов</li>
+          <li aria-level="1">случайно оказавшихся неподалеку от шествия</li>
+        </ul>
+        <p>Человек на видео или фото может быть чем-то похож на вас или ваших знакомых. Но сотрудники полиции и системы автоматического распознавания лиц ошибаются. Точность совпадения никогда не достигает 100%. В таком случае так и говорите полиции: «Я не узнаю себя на видео» или «Я не узнаю на видео такого-то».</p>
+        <p>Помните, что ваши показания могут быть использованы, чтобы преследовать всех, кого вы узнаете на видео и фото.</p>
+        <p>Если вы идете в полицию, не надевайте одежду, в которой были на акции. Это будет дополнительным аргументом против вас. Будет проще, если у вас с людьми на видео не будут совпадать одежда, прическа и т. д.</p>
+        <p>Если вы были во время акции в другом месте, вспомните, кто сможет это подтвердить. В том числе могут пригодиться геоданные из вашего Google-аккаунта и других подобных систем — распечатайте и возьмите с собой.</p>
+        <p>Учтите, что если вы ранее участвовали в других акциях, были осуждены по статье 20.2 КоАП и прошло менее 1 года с момента исполнения наказания, вас могут привлечь за повторное участие (<a href="http://www.consultant.ru/document/cons_doc_LAW_34661/c77bf52af28dfd8f9de192b9faf0999c023256d2/" target="_blank">ч. 8 ст. 20.2 КоАП</a>). Наказание по этой части — штраф от 150 до 300 тысяч рублей или арест до 30 суток.</p>
+      </div>
+      <span class="about-btn button-modal icon-info-1" data-target="aboutModal" title="Об инструкции"><span class="header-name">Об инструкции</span></span>
+      <div style="display: none;">
+        <div class="box-modal" id="aboutModal">
+          <div class="box-modal_close arcticmodal-close icon-cancel"></div>
+          <div class="about-series-content">
+            <h3>Об инструкции</h3>
+            <div class="field field-name-field-about field-type-text-long field-label-hidden">
+              <div class="field-items">
+                <div class="field-item even">
+                  <p>Иллюстрация: <a href="https://www.varyusha.com/" target="_blank">Ященко Варвара</a> для ОВД-Инфо</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar">
+        <span class="burger icon-menu" id="burger"></span>
+        <nav id="menu" data-depth="20">
+          <h2>Содержание</h2>
+          <!-- munu items -->
+        </nav>
+        <div id="let-know">
+          <a id="call-header" href="tel:+78007070528">Сообщить о задержании:</a>
+          <div id="connect">
+            <a id="tg-bot" class="icon-paper-plane-empty" href="https://t.me/OvdInfoBot" target="_blank">Правовой бот</a>
+            <a class="call-nr icon-phone" href="tel:+78007070528">8 800 707-05-28</a>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer id="footer">
+        <div id="footer-wrap">
+          <h3>ОВД-Инфо</h3>
+          <div class="footer-column-first">
+            <a href="https://ovdinfo.org" title="сайт овд-инфо">ovdinfo.org</a>
+            <div id="social">
+              <a href="https://t.me/ovdinfo" target="_blank" class="icon-paper-plane-empty"></a>
+              <a href="https://facebook.com/ovdinfo" target="_blank" class="icon-facebook"></a>
+              <a href="https://vk.com/ovdinfo" target="_blank" class="icon-vkontakte"></a>
+              <a href="https://twitter.com/ovdinfo" target="_blank" class="icon-twitter"></a>
+            </div>
+          </div>
+          <div class="footer-column-second">
+            <a href="/" class="legal-link" title="Твои права">Твои права</a>		
+          </div>
+          <div class="footer-bottom">
+            <p><span class="nobr">ОВД-Инфо</span>: «Распознавание участников протеста по видеокамерам» лицензировано в соответствии с Creative Commons Attribution 3.0 Unported License.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- // Wrapper -->
+    <!-- gallery template -->
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // gallery template -->
+
+    <script src="/static/js/libs/social-likes.min.js"></script>
+    <script src="/static/js/libs/prognroll.js"></script>
+    <script src="/static/js/libs/arcticmodal.js"></script>
+    <script src="/static/js/libs/photoswipe.js"></script>
+    <script src="/static/js/libs/photoswipe-ui-default.js"></script>
+    <script src="/static/js/libs/photoswipe-custom.js"></script>
+    <script src="/static/js/legal.js"></script>
+
+    <!-- temp -->
+    <script src="/ovdinfo/static/js/libs/social-likes.min.js"></script>
+    <script src="/ovdinfo/static/js/libs/prognroll.js"></script>
+    <script src="/ovdinfo/static/js/libs/arcticmodal.js"></script>
+    <script src="/ovdinfo/static/js/libs/photoswipe.js"></script>
+    <script src="/ovdinfo/static/js/libs/photoswipe-ui-default.js"></script>
+    <script src="/ovdinfo/static/js/libs/photoswipe-custom.js"></script>
+    <script src="/ovdinfo/static/js/legal.js"></script>
+  </body>
+</html>
