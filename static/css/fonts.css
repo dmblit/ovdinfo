@@ -425,3 +425,12 @@
 
 
 /* 'î •' */
+
+
+.icon-info:before {
+    content: '\f129'
+}
+
+.icon-info-1:before {
+    content: '\e817'
+}
