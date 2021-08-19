@@ -27,28 +27,48 @@
   // подправляет адреса/ссылки в HTML, если вдруг сайт находится не в корне домена
   // (some-user.github.io/ovdinfo вместо ovdinfo.github.io)
   function patchSiteRoot() {
-    var rootUrl = new URL(window.location);
-    if (rootUrl.hostname === 'localhost') return;
+    var pageUrl = new URL(window.location);
 
     function getPatchedURL(urlStr) {
       var url = new URL(urlStr);
-      if (url.origin !== rootUrl.origin) return url;
-      if (!/ovdinfo/.test(url.host) && !/^\/ovdinfo/.test(url.pathname)) {
+      // пропускаем ссылки на другие домены и на подзаголовки внутри самой страницы
+      if (url.origin !== pageUrl.origin || url.pathname === pageUrl.pathname) {
+        return url;
+      }
+      if (!/^\/ovdinfo/.test(url.pathname)) {
         url.pathname = '/ovdinfo' + url.pathname;
       }
       return url;
     }
-    document.querySelectorAll('a').forEach(function(link) {
-      link.href = getPatchedURL(link.href);
-    });
-    document.querySelectorAll('img').forEach(function(img) {
-      img.src = getPatchedURL(img.src);
-    });
-    document.querySelectorAll('[style]').forEach(function(node) {
-      var bgImg = getComputedStyle(node).backgroundImage.replace('url("', '').replace('")', '');
-      if (bgImg === 'none') return;
-      node.style.backgroundImage = 'url("' + getPatchedURL(bgImg) + '")';
-    });
+
+    var img = new Image();
+    var src = '/static/img/favicon.ico';
+    // предположим, что ошибка значит, что сайт не в корне домена
+    img.onerror = function() {
+      document.querySelectorAll('a, link').forEach(function(link) {
+        var patched = getPatchedURL(link.href);
+        if (String(patched) !== link.href) {
+          link.href = patched;
+        }
+      });
+      document.querySelectorAll('img').forEach(function(img) {
+        img.src = getPatchedURL(img.src);
+      });
+      document.querySelectorAll('[style]').forEach(function(node) {
+        var bgImg = getComputedStyle(node).backgroundImage.replace('url("', '').replace('")', '');
+        if (bgImg === 'none') return;
+        node.style.backgroundImage = 'url("' + getPatchedURL(bgImg) + '")';
+      });
+      document.querySelectorAll('script').forEach(function(script) {
+        if (!script.src || /\/ghpages\.js$/.test(script.src)) {
+          return;
+        }
+        var clone = document.createElement('script');
+        clone.src = getPatchedURL(script.src);
+        script.insertAdjacentElement('afterend', clone);
+      });
+    };
+    img.src = src;
   }
 
   function onReady() {
