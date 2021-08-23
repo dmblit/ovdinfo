@@ -1,5 +1,8 @@
-(function ($) {
+/**
+ * Скрипт скопирован с https://ovdinfo.org/sites/all/themes/ovdinfo/custom/legals/instruction/js/scripts-clone.js с минимальными изменениями
+ */
 
+(function ($) {
   $.fn.autoMenu = function (settings) {
     settings = $.extend({ // this defines the defaults
       startDepth: 2, // starting level param

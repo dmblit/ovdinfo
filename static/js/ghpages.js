@@ -1,6 +1,10 @@
 (function() {
   'use strict';
 
+  /**
+   * Меняет порядок контента на главной в мобильной версии
+   * (чтобы при редактировании исходного HTML достаточно было это сделать в одном месте)
+   */
   function buildMobileLayout() {
     var mobileColumn = document.getElementById('ghpages-mobile');
     if (!mobileColumn) return;
@@ -24,8 +28,10 @@
     });
   }
 
-  // подправляет адреса/ссылки в HTML, если вдруг сайт находится не в корне домена
-  // (some-user.github.io/ovdinfo вместо ovdinfo.github.io)
+  /**
+   * Подправляет адреса/ссылки в HTML, если вдруг сайт находится не в корне домена
+   * (some-user.github.io/ovdinfo вместо ovdinfo.github.io)
+   */
   function patchSiteRoot() {
     var pageUrl = new URL(window.location);
 
