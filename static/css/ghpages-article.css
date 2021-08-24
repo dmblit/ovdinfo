@@ -12,10 +12,6 @@
   display: flex;
   max-width: 900px;
 }
-/*temp*/
-.text-page #social-column {
-  display: none;
-}
 @media (max-width: 799.9px) {
   #columns {
     flex-direction: column;
